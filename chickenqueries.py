@@ -13,34 +13,34 @@ def sortbymultiple():
             for cell in row:
                 if 'egg' in typesort:
                     if (cell.value == 'eggs' or cell.value == 'dual') and len(endlist)==0:
-                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per year')
+                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per week')
                     elif cell.value == 'eggs' or cell.value == 'dual':
                         if row[0].value in endlist:
-                            print(row[0].value + ': ' + str(row[2].value) + ' eggs per year')
+                            print(row[0].value + ': ' + str(row[2].value) + ' eggs per week')
                 elif 'meat' in typesort:
                     if (cell.value == 'meat' or cell.value == 'dual') and len(endlist)==0:
-                        print(row[0].value + ': weight from ' + str(row[3].value) + ' to ' + str(row[4].value) + ' pounds.')
+                        print(row[0].value + ': weight from ' + str(row[7].value) + ' to ' + str(row[8].value) + ' pounds.')
                     elif cell.value == 'meat' or cell.value == 'dual':
                         if row[0].value in endlist:
-                            print(row[0].value + ': weight from ' + str(row[3].value) + ' to ' + str(row[4].value) + ' pounds.')
+                            print(row[0].value + ': weight from ' + str(row[7].value) + ' to ' + str(row[8].value) + ' pounds.')
                 elif 'dual' in typesort:
                     if cell.value == 'dual' and len(endlist)==0:
-                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per year and weight from ' + str(row[3].value) + ' to ' + str(row[4].value) + ' pounds.')
+                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per week and weight from ' + str(row[7].value) + ' to ' + str(row[8].value) + ' pounds.')
                     elif cell.value == 'dual':
-                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per year and weight from ' + str(row[3].value) + ' to ' + str(row[4].value) + ' pounds.')
+                        print(row[0].value + ': ' + str(row[2].value) + ' eggs per week and weight from ' + str(row[7].value) + ' to ' + str(row[8].value) + ' pounds.')
                 else:
                     print('cluck')
     def freerange():
         for row in ws.iter_rows():
-            if row[5].value == True:
+            if row[9].value == True:
                     frlist.append(row[0].value)
     def cold():
         for row in ws.iter_rows():
-            if row[6].value == True:
+            if row[10].value == True:
                 coldlist.append(row[0].value)
     def hot():
         for row in ws.iter_rows():
-            if row[7].value == True:
+            if row[11].value == True:
                 heatlist.append(row[0].value)
     def endlist_compile():
         for item in frlist:
